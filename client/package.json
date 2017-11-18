@@ -1,0 +1,37 @@
+{
+    "name": "ballerina-vscode",
+    "displayName": "ballerina-vscode",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "roonyh",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Other"
+    ],
+	"activationEvents": [
+		"onLanguage:plaintext"
+	],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "vscode-languageclient": "^3.4.2",
+        "eslint": "^4.6.1",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
